@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClInclude Include="stack.hpp" />
     <ClInclude Include="stack_template.hpp" />
+    <ClInclude Include="test.hpp" />
+    <ClInclude Include="test.template.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

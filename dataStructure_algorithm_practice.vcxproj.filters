@@ -26,5 +26,11 @@
     <ClInclude Include="stack_template.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test.template.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

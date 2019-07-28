@@ -1,2 +1,3 @@
 ﻿  main.cpp
+c:\users\chiaki\projects\repos\datastructure_algorithm_practice\datastructure_algorithm_practice\main.cpp(5): warning C4326: return type of 'main' should be 'int' instead of 'void'
   dataStructure_algorithm_practice.vcxproj -> C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\x64\Debug\dataStructure_algorithm_practice.exe
