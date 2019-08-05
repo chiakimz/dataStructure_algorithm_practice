@@ -78,6 +78,43 @@ set<Type, SetSize> set<Type, SetSize>::operator* (const set<Type, SetSize>& Set2
 	return Intsect;
 }
 
+// operator overloading for difference function
+template <class Type, int SetSize>
+set<Type, SetSize> set<Type, SetSize>::operator- (const set<Type, SetSize>& Set2) const
+{
+	set<Type, SetSize> Union = *this + Set2;
+	set<Type, SetSize> Intersect = *this * Set2;
+	set<Type, SetSize> Difference;
+
+	int marker1 = 0, marker2 = 0;
+
+	while (marker1 < Union._num_of_elements)
+	{
+		if(Union._element[marker1] != Intersect._element[marker2])
+		{
+			Difference.insert(Union._element[marker1]);
+			marker1++;
+		} 
+		else if(Union._element[marker1] == Intersect._element[marker2])
+		{
+			marker1++;
+			if(marker2 != Intersect._num_of_elements)
+				marker2++;
+		}
+		
+		else 
+		{
+			Difference.insert(Union._element[marker1]);
+			marker1++;
+		}
+	}
+
+
+
+	return Difference;
+
+
+}
 // tests if "member" is in the current set
 template <class Type, int SetSize> 
 BOOL set<Type, SetSize>::contains(const Type& member) const
