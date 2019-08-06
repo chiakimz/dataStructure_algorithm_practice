@@ -138,6 +138,29 @@ bool set<Type, SetSize>::operator<= (const set<Type, SetSize>& Set2) const
 		return false;
 }
 
+// operator overloading for equal test function. Testing if Set1 and Set2 are equal
+template <class Type, int SetSize>
+bool set<Type, SetSize>::operator== (const set<Type, SetSize>& Set2) const
+{
+	set<Type, SetSize> Union = *this + Set2;
+	set<Type, SetSize> Intersect = *this * Set2;
+	int marker1 = 0, marker2 = 0;
+	if(Union._num_of_elements != Intersect._num_of_elements)
+	{
+		return false;
+	}
+	else
+	{
+		while(marker1 < Union._num_of_elements)
+		{
+			if(Union._element[marker1] != Intersect._element[marker2])
+				return false;
+			else
+				marker1++; marker2++;
+		}
+		return true;
+	}
+}
 // tests if "member" is in the current set
 template <class Type, int SetSize> 
 BOOL set<Type, SetSize>::contains(const Type& member) const

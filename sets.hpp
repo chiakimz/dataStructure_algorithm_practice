@@ -21,8 +21,10 @@ public:
 		operator*(const set<Type, SetSize>& Set2) const;
 	set<Type, SetSize> // difference
 		operator-(const set<Type, SetSize>& Set2) const;
-	bool // subset
+	bool // test if its subset
 		operator<=(const set<Type, SetSize>& Set2) const;
+	bool // test if its equal
+		operator==(const set<Type, SetSize>& Set2) const;
 	void print() const;
 	void read();
 };
