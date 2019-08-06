@@ -21,6 +21,8 @@ public:
 		operator*(const set<Type, SetSize>& Set2) const;
 	set<Type, SetSize> // difference
 		operator-(const set<Type, SetSize>& Set2) const;
+	bool // subset
+		operator<=(const set<Type, SetSize>& Set2) const;
 	void print() const;
 	void read();
 };

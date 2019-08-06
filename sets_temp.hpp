@@ -108,13 +108,36 @@ set<Type, SetSize> set<Type, SetSize>::operator- (const set<Type, SetSize>& Set2
 			marker1++;
 		}
 	}
-
-
-
 	return Difference;
-
-
 }
+
+// operator overloading for subset test function. Testing Set1 is a subset of Set2, therefore Set1 is assumed to be shorter than Set2 if true
+template <class Type, int SetSize>
+bool set<Type, SetSize>::operator<= (const set<Type, SetSize>& Set2) const
+{
+	int marker1 = 0, marker2 = 0, num_of_shared_elements = 0;
+
+	while (marker2 < Set2._num_of_elements)
+	{
+		if(_element[marker1] < Set2._element[marker2])
+		{
+			marker1++;
+		} 
+		else if(_element[marker1] == Set2._element[marker2])
+		{
+			marker1++; marker2++; num_of_shared_elements++;
+		}
+		else 
+		{
+			marker2++;
+		}
+	}
+	if(num_of_shared_elements == _num_of_elements)
+		return true;
+	else
+		return false;
+}
+
 // tests if "member" is in the current set
 template <class Type, int SetSize> 
 BOOL set<Type, SetSize>::contains(const Type& member) const
