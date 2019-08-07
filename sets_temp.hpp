@@ -2,19 +2,19 @@
 #include "sets.hpp"
 
 template <class Type, int SetSize>
-set<Type, SetSize>::set() 
+Set<Type, SetSize>::Set() 
 	: _num_of_elements(0) {}
 
 template <class Type, int SetSize>
-set<Type, SetSize>::set(Type empty_element) 
+Set<Type, SetSize>::Set(Type empty_element) 
 	: _num_of_elements(0), _empty_element(empty_element) {}
 
 // Use + operator for set union. Operator overloading! :D
 // Elements added to union from *this and Set2 using insertion sort
 template <class Type, int SetSize>
-set<Type, SetSize> set<Type, SetSize>::operator+(const set<Type, SetSize>& Set2) const
+Set<Type, SetSize> Set<Type, SetSize>::operator+(const Set<Type, SetSize>& Set2) const
 {
-	set<Type, SetSize> Union;
+	Set<Type, SetSize> Union;
 	int marker1 = 0, marker2 = 0;
 	int union_size = 0;
 	while (marker1 < _num_of_elements && marker2 < Set2._num_of_elements)
@@ -54,9 +54,9 @@ set<Type, SetSize> set<Type, SetSize>::operator+(const set<Type, SetSize>& Set2)
 // Elements added to Intsect from *this and Set2 using insertion sort
 
 template <class Type, int SetSize>
-set<Type, SetSize> set<Type, SetSize>::operator* (const set<Type, SetSize>& Set2) const
+Set<Type, SetSize> Set<Type, SetSize>::operator* (const Set<Type, SetSize>& Set2) const
 {
-	set<Type, SetSize> Intsect;
+	Set<Type, SetSize> Intsect;
 	int marker1 = 0, marker2 = 0;
 
 	while (marker1 < _num_of_elements && marker2 < Set2._num_of_elements)
@@ -80,11 +80,11 @@ set<Type, SetSize> set<Type, SetSize>::operator* (const set<Type, SetSize>& Set2
 
 // operator overloading for difference function
 template <class Type, int SetSize>
-set<Type, SetSize> set<Type, SetSize>::operator- (const set<Type, SetSize>& Set2) const
+Set<Type, SetSize> Set<Type, SetSize>::operator- (const Set<Type, SetSize>& Set2) const
 {
-	set<Type, SetSize> Union = *this + Set2;
-	set<Type, SetSize> Intersect = *this * Set2;
-	set<Type, SetSize> Difference;
+	Set<Type, SetSize> Union = *this + Set2;
+	Set<Type, SetSize> Intersect = *this * Set2;
+	Set<Type, SetSize> Difference;
 
 	int marker1 = 0, marker2 = 0;
 
@@ -113,7 +113,7 @@ set<Type, SetSize> set<Type, SetSize>::operator- (const set<Type, SetSize>& Set2
 
 // operator overloading for subset test function. Testing Set1 is a subset of Set2, therefore Set1 is assumed to be shorter than Set2 if true
 template <class Type, int SetSize>
-bool set<Type, SetSize>::operator<= (const set<Type, SetSize>& Set2) const
+bool Set<Type, SetSize>::operator<= (const Set<Type, SetSize>& Set2) const
 {
 	int marker1 = 0, marker2 = 0, num_of_shared_elements = 0;
 
@@ -140,7 +140,7 @@ bool set<Type, SetSize>::operator<= (const set<Type, SetSize>& Set2) const
 
 // operator overloading for equal test function. Testing if Set1 and Set2 are equal
 template <class Type, int SetSize>
-bool set<Type, SetSize>::operator== (const set<Type, SetSize>& Set2) const
+bool Set<Type, SetSize>::operator== (const Set<Type, SetSize>& Set2) const
 {
 	set<Type, SetSize> Union = *this + Set2;
 	set<Type, SetSize> Intersect = *this * Set2;
@@ -163,7 +163,7 @@ bool set<Type, SetSize>::operator== (const set<Type, SetSize>& Set2) const
 }
 // tests if "member" is in the current set
 template <class Type, int SetSize> 
-BOOL set<Type, SetSize>::contains(const Type& member) const
+BOOL Set<Type, SetSize>::contains(const Type& member) const
 {
 	for (int marker = 0; marker < _num_of_elements; marker++)
 		if(_element[marker] == member)
@@ -173,7 +173,7 @@ BOOL set<Type, SetSize>::contains(const Type& member) const
 
 // Adds "element" to current set. returns TRUE if successful
 template <class Type, int SetSize>
-BOOL set<Type, SetSize>::insert(const Type& element)
+BOOL Set<Type, SetSize>::insert(const Type& element)
 {
 	if(!contains(element) && _num_of_elements < SetSize)
 	{
@@ -195,7 +195,7 @@ BOOL set<Type, SetSize>::insert(const Type& element)
 
 // reads in set elements from keyboard
 template<class Type, int SetSize>
-void set<Type, SetSize>::read()
+void Set<Type, SetSize>::read()
 {
 	Type new_element;
 
@@ -223,7 +223,7 @@ void set<Type, SetSize>::read()
 
 // Prints set elements on screen
 template <class Type, int SetSize>
-void set<Type, SetSize>::print() const
+void Set<Type, SetSize>::print() const
 {
 	std::cout << "Set elements: ";
 	for (int marker = 0; marker < _num_of_elements; marker++)

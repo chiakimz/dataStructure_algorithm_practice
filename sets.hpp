@@ -4,27 +4,27 @@
 typedef int BOOL;
 enum {FALSE, TRUE}; // enumeration is a distinct type whose value is restricted to a range of values
 template <class Type, int SetSize>
-class set
+class Set // it's a base class now
 {
-private:
+protected:
 	Type _element[SetSize];
 	Type _empty_element;
 	int _num_of_elements;
 public:
-	set();
-	set(Type empty_element);
+	Set();
+	Set(Type empty_element);
 	BOOL contains(const Type& member) const;
 	BOOL insert(const Type& element);
-	set<Type, SetSize> // union
-		operator+(const set<Type, SetSize>& Set2) const;
-	set<Type, SetSize> // intersection
-		operator*(const set<Type, SetSize>& Set2) const;
-	set<Type, SetSize> // difference
-		operator-(const set<Type, SetSize>& Set2) const;
+	Set<Type, SetSize> // union
+		operator+(const Set<Type, SetSize>& Set2) const;
+	Set<Type, SetSize> // intersection
+		operator*(const Set<Type, SetSize>& Set2) const;
+	Set<Type, SetSize> // difference
+		operator-(const Set<Type, SetSize>& Set2) const;
 	bool // test if its subset
-		operator<=(const set<Type, SetSize>& Set2) const;
+		operator<=(const Set<Type, SetSize>& Set2) const;
 	bool // test if its equal
-		operator==(const set<Type, SetSize>& Set2) const;
+		operator==(const Set<Type, SetSize>& Set2) const;
 	void print() const;
 	void read();
 };
