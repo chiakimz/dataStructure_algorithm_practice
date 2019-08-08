@@ -10,9 +10,12 @@ protected:
 	Type _element[SetSize];
 	Type _empty_element;
 	int _num_of_elements;
+
 public:
 	Set();
 	Set(Type empty_element);
+
+public:
 	BOOL contains(const Type& member) const;
 	BOOL insert(const Type& element);
 	Set<Type, SetSize> // union
