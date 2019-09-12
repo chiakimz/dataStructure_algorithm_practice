@@ -152,6 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="int_sets.hpp" />
+    <ClInclude Include="linkedList.hpp" />
+    <ClInclude Include="linkedList_temp.hpp" />
+    <ClInclude Include="queue.hpp" />
+    <ClInclude Include="queue.temp.hpp" />
     <ClInclude Include="sets.hpp" />
     <ClInclude Include="sets_temp.hpp" />
     <ClInclude Include="stack.hpp" />
