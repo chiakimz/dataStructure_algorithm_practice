@@ -25,7 +25,7 @@ public:
 	virtual ~Queue();
 	bool empty() const;
 	virtual void insert(const Type& newElement);
-	virtual bool pop(const Type& delElement);
+	virtual bool pop();
 	void print() const;
 	void read();
 

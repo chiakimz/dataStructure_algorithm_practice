@@ -30,3 +30,28 @@ void Queue<Type>::insert(const Type& newElement)
 	_marker->_next = new QueueNode(newElement, _marker->next);
 
 }
+
+template <typename Type>
+bool Queue<Type>::pop()
+{
+	// since this is a queue, we want the first element to go out. if the queue is not empty, we pop the element of head node and return true, otherwise return false
+	QueueNode *marker = _head->next;
+	if(!empty())
+	{
+		delete marker->_element;
+		return true;
+	}
+	else
+		return false;
+}
+
+template <typename Type>
+void Queue<Type>::print() const
+{
+	std::cout << "Traversal of queue: ";
+	QueueNode *marker = _head->_next;
+	for (; marker; marker = marker->_next)
+		std::cout << marker->_element << ' ';
+	std::cout << std::endl;
+}
+
