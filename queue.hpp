@@ -21,7 +21,8 @@ protected:
 
 public:
 	Queue() : _head(new QueueNode) {}
-	Queue(Type defaultVal), _head(new QueueNode) {}
+	Queue(Type defaultVal) :
+		_defaultVal(defaultVal), _head(new QueueNode) {}
 	virtual ~Queue();
 	bool empty() const;
 	virtual void insert(const Type& newElement);

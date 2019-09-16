@@ -1,29 +1,3 @@
-﻿  int_sets_temp.hpp
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(9,1): error C2059:  syntax error: 'constant'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(14): message :  see reference to class template instantiation 'Int_sets<Type,SetSize>' being compiled
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(9,1): error C2535:  'Int_sets<Type,SetSize>::Int_sets(void)': member function already defined or declared
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(8): message :  see declaration of 'Int_sets<Type,SetSize>::Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(13,1): error C2808:  unary 'operator !' has too many formal parameters
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(3,11): error C2955:  'Int_sets': use of class template requires template argument list
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(3,21): error C2509:  '{ctor}': member function not declared in 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(5,12): error C2955:  'Int_sets': use of class template requires template argument list
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(5,22): error C2509:  '{dtor}': member function not declared in 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(7,11): error C2955:  'Int_sets': use of class template requires template argument list
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets_temp.hpp(8,1): error C2509:  '!': member function not declared in 'Int_sets'
-  main.cpp
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\int_sets.hpp(5): message :  see declaration of 'Int_sets'
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(145,2): error C3861:  'set': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(145,21): error C3861:  'Union': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(146,2): error C3861:  'set': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(146,21): error C3861:  'Intersect': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(148,5): error C3861:  'Union': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(148,31): error C3861:  'Intersect': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(154,19): error C3861:  'Union': identifier not found
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(156,7): error C3861:  'Union': identifier not found
-  Generating Code...
-C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\sets_temp.hpp(156,34): error C3861:  'Intersect': identifier not found
+﻿  main.cpp
+C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\dataStructure_algorithm_practice\main.cpp(8,6): warning C4101:  'delElement': unreferenced local variable
+  dataStructure_algorithm_practice.vcxproj -> C:\Users\Chiaki\Projects\repos\dataStructure_algorithm_practice\x64\Debug\dataStructure_algorithm_practice.exe
